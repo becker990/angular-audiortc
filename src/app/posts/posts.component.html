@@ -1,0 +1,26 @@
+<p>posts works!</p>
+<p>this instance var is: {{ this.myvar }}</p>
+<p> we has from service {{ this.jsonp.servar }}</p>
+
+<button class="btn btn-primary" (click)="handleInc()">
+    Mess with service
+</button>
+
+<ng-container *ngIf="jsonp.posts; then lista else nolista">
+</ng-container>
+<ng-template #lista>
+    <ul>
+        <li *ngFor="let p of jsonp.posts">
+            <h4>userid: {{ p.userId }} - {{ p.title }}</h4>
+            <p>texto: {{ p.body }}</p>            
+        </li> 
+    </ul>
+</ng-template>
+<ng-template #nolista>
+    <p>Nenhum</p>
+</ng-template>           
+
+
+   
+    
+
