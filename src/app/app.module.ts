@@ -10,6 +10,7 @@ import { OutroComponent } from './outro/outro.component';
 import { OutroSubcompComponent } from './outro-subcomp/outro-subcomp.component';
 import { MasterService } from './services/master.service';
 import { RecorderComponent } from './recorder/recorder.component';
+import { PostComponent } from './post/post.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { RecorderComponent } from './recorder/recorder.component';
     OutroComponent,
     OutroSubcompComponent,
     RecorderComponent,
+    PostComponent,
   ],
   imports: [
     BrowserModule,

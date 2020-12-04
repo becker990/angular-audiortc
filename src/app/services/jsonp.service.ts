@@ -22,6 +22,15 @@ export class JsonpService {
     this.getPosts();
   }
 
+  doinc(){
+    console.log('doing inc');
+    this.servar++;
+  }
+
+  getservar(){
+    return 10 * this.servar;
+  }
+
   process1(){
     console.log('process 1');
     this.master.message1();

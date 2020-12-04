@@ -2,19 +2,28 @@
 <p>this instance var is: {{ this.myvar }}</p>
 <p> we has from service {{ this.jsonp.servar }}</p>
 
+<p> we has from method {{ this.jsonp.getservar() }}</p>
+<p> we has from selfvar {{ this.getmyvarloco() }}</p>
+
 <button class="btn btn-primary" (click)="handleInc()">
     Mess with service
+</button>
+<button class="btn btn-primary" (click)="otherop()">
+    otherop
+</button>
+
+<button class="btn btn-primary" (click)="anotherop()">
+    anotherop
 </button>
 
 <ng-container *ngIf="jsonp.posts; then lista else nolista">
 </ng-container>
 <ng-template #lista>
-    <ul>
+    <ol>
         <li *ngFor="let p of jsonp.posts">
-            <h4>userid: {{ p.userId }} - {{ p.title }}</h4>
-            <p>texto: {{ p.body }}</p>            
+            <app-post [post]="p"></app-post>
         </li> 
-    </ul>
+    </ol>
 </ng-template>
 <ng-template #nolista>
     <p>Nenhum</p>
